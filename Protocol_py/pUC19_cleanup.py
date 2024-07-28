@@ -1,4 +1,4 @@
-from gcode_generator_v1_1 import *  # Import all functions from gcode_generator_v1_1
+from gcode_generator_v1_2 import *  # Import all functions from gcode_generator_v1_1
 from io import StringIO
 import sys
 
