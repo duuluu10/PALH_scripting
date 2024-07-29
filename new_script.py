@@ -32,9 +32,6 @@ def generate_and_save_gcode():
     G28()
 
     # Your code from here
-    aspirate_volume(80, aspiration_module=tube2, well_location='1',
-                    air_gap=True,
-                    air_gap_vol=10)
 
     # Reset stdout
     sys.stdout = sys.__stdout__
