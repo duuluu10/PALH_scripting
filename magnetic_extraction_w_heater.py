@@ -36,8 +36,6 @@ def generate_and_save_gcode():
     preload_volume(tube3_rimless, '24', 0, 'Elution_final')
     preload_volume(plate_96_biorad, 'B1', 100, 'Sample')
     preload_volume(plate_96_biorad, 'B2', 100, 'LB1') #Proteinase K (5uL) and Lysis buffer mixed (95ul)
-    # preload_volume(plate_96_biorad, 'A3', 30, 'PK')
-    # preload_volume(plate_96_biorad, 'A4', 100, 'Water')
     preload_volume(plate_96_biorad, 'B3', 50, 'EB6')
     preload_volume(tube2, '1', 0, 'Premix')
     preload_volume(tube2, '2', 360, 'BB2+MB') #Binding buffer (350uL) and magnetic beads (10uL) mixed
@@ -56,10 +54,6 @@ def generate_and_save_gcode():
     new_tip(E1_yellow_tips)
     aspirate_volume(100, custom_name='LB1', air_gap=True, deadpump_vol=5)
     dispense_volume(custom_name='Premix', blowout=True, touch_tip=True, direct=True)
-    # eject()
-    # new_tip(E1_yellow_tips)
-    # aspirate_volume(10, custom_name='PK', air_gap=True)
-    # dispense_volume(custom_name='Premix', blowout=True, touch_tip=True, direct=True)
 
     mix(20, mix_volume=100, custom_name='Premix', aspirate_feedrate=2500, dispense_feedrate=2500)
     eject()
@@ -112,10 +106,6 @@ def generate_and_save_gcode():
 
     # Heat up pipette beads
     heat(temperature=65, duration=4*60, height_adj=+3, direct=True)
-
-    # # Wash pipette before elution
-    # aspirate_volume(25, custom_name='Water', air_gap=False, air_gap_vol=50, deadpump_vol=20)
-    # dispense_volume(custom_name='Water', blowout=True, touch_tip=True, direct=True, safe_dist=False)
 
     # Elute DNA (EB6)
     mix(50, mix_volume=90, custom_name='EB6', aspirate_feedrate=2500, dispense_feedrate=2500)

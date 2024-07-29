@@ -412,7 +412,7 @@ def height_cal(tube_type, tube_number, initial_z_height, iterations=5, z_decreme
 
 
 ############ Action Functions ############
-def move_to_well_location(module, well, safe_dist=True, direct=False, feedrate=3000):
+def move_to_well_location(module, well, safe_dist=True, direct=True, feedrate=3000):
     """
     Move the pipette to the well top of the tube/well location
 

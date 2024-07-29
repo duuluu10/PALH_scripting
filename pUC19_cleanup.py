@@ -73,11 +73,6 @@ def generate_and_save_gcode():
     # Heat up pipette beads
     heat(temperature=45, duration=30, direct=True)
 
-    # Elute DNA
-    # mix(20, mix_volume=90, custom_name='RB', aspirate_feedrate=2500, dispense_feedrate=2500)
-    # incubation_duration = 2 * 60
-    # print(f'G4 P{incubation_duration * 1000}\n')  # G4 P<duration in milliseconds>
-    # aspirate_volume(33, custom_name='RB', air_gap=True, air_gap_vol=50, deadpump_vol=10, safe_dist=False)
     aspirate_volume(33, custom_name='RB', air_gap=True, air_gap_vol=40, deadpump_vol=25)
     pipette_mix(20, lower_limit=60, upper_limit=100, mix_feedrate=2500)
     incubation_duration = 60
