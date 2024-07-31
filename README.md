@@ -19,7 +19,7 @@ Example workflows:
 * magnetic_extraction_w_heater.py - Magnetic bead-based extraction of nucleic acid from a crude sample
 * pUC19_amplification - End-point PCR amplification setup for pUC19 vector
 * pUC19_cleanup - Magnetic bead-based cleanup of amplified pUC19 products
-* RPLP0_qPCR_protocol - qPCR amplification setup for housekeeping gene RPLP0
+* YWHAZ_qPCR_protocol - qPCR amplification setup for housekeeping gene YWHAZ
 
 ---
 
